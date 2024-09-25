@@ -18,8 +18,10 @@
         </address>
         <h4>Media</h4>
         <img src="media/images/Gabe.png"> <br>
-        <video autoplay loop>
-            <source src="media/videos/video.mp4" type="video/mp4"> <!--Controls allows user to pause/play video, source must be followed by tag specifying video type-->
+        <video autoplay muted controls loop>
+            <source src="media/videos/video.mp4" type="video/mp4">
+            <!--Controls allows user to pause/play video, source must be followed by tag specifying video type-->
+            <!--Chromium browsers do not allow Autoplay unless source is muted-->
         </video>
     </body>
 </html>
