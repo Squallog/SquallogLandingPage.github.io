@@ -43,6 +43,10 @@
   body{
     font-family: 'ExoExtraLight';
   }
+  .columns {
+    width: 20%;
+    display: inline-block;
+  }
 </style>
 <html>
     <title>Landing Page Title</title> <!--The title is what appears in the tab topbar-->
@@ -50,14 +54,7 @@
         <h1>Heading One Looks Like This</h1>
         <p>Use h markers to create headings within a body. Use p markers to create paragraphs inside a body.</p>
         <div> <!--Divs are containers used to segment HTML elements-->
-          <style>
-            div {
-              width: 20%;
-              display: inline-block;
-            }
-          </style>
-
-          <div>
+          <div class="columns">
             <h2>Heading Two Looks Like This</h2>
             <p>Line breaks are inserted with a br suffix.<b> <br>Text can be made bold with a b suffix.</b> <br><i>An i suffix creates itallic text. </i><br>
               <a href="https://www.pistonheads.com/buy/listing/17340806">
@@ -66,7 +63,7 @@
             </p>
           </div>
 
-          <div>
+          <di class="columns">
             <h3>Non Paragraph Text</h3>
             <address>
               The address element <br>
@@ -75,12 +72,12 @@
             </address>
           </div>
 
-          <div>
+          <div class="columns">
             <h4>Image</h4>
             <img src="media/images/Gabe.png"> <br>
           </div>
           
-          <div>
+          <div class="columns">
             <h4>Video</h4>
             <video autoplay muted loop height="400"> <!--Attributes go here-->
               <source src="media/videos/video.mp4" type="video/mp4">
@@ -91,7 +88,7 @@
         </div>
 
         <h1>Another Heading One</h1>
-        <p>Exo Extra Light is used for body text now.</p>
-        
+        <p>Exo Extra Light is used for body text now. <br>Line break so I know this was updated.</p>
+
     </body>
 </html>
