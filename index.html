@@ -1,16 +1,14 @@
 <!-- commenting looks like this -->
 <style>
-    @font-face { 
-        font-family: Exo; 
-        src: url('Exo-VariableFont_wght.ttf'); 
-    }
     @font-face {
-        font-family: Exo; font-weight:bold ;
-        src: url(Exo-Italic-VariableFont_wght.ttf);
-    }
-    h1 {
-        font-family: Exo
-    }
+    font-family: 'Exo';
+    src: local('Exo Bold'), local('Exo-Bold'),
+        url('Exo-Bold.woff2') format('woff2'),
+        url('Exo-Bold.woff') format('woff'),
+        url('Exo-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
 </style>
 <html>
     <title style="font-family: Exo">Landing Page Title</title> <!--The title is what appears in the tab topbar-->
