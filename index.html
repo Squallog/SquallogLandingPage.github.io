@@ -11,7 +11,7 @@
       I've done this to allow you to apply the "Exo" font to all elements (as you seemed to be doing)
       and set the weight independantly.
      */
-    @font-face {
+  @font-face {
     font-family:'Exo';
     src: local('Exo Bold'), local('Exo-Bold'),
         url('fonts/Exo-Bold.woff2') format('woff2'),
@@ -38,7 +38,6 @@
     font-weight: lighter;
     font-style: normal;
   }
-
   body{
     font-family: "Exo";
     font-weight: lighter;
@@ -52,7 +51,6 @@
 
   selects all elements directly within the body that are not the "columns" class
   */
-
   h1{
     font-weight: bold;
   }
@@ -65,7 +63,6 @@
   h4{
     font-weight: normal;
   }
-
   div.columns {
     margin: 0; /* If youre setting a value to 0 you dont need to define a value */
     width: 100%;
@@ -109,10 +106,10 @@
           </address>
         </div><div style="background-color:#FFF4A3; margin-left: 4px; margin-right: 4px;">
           <h4>Image</h4>
-          <img src="media/images/Gabe.png" style="width: 100%;"><br>
+          <img src="media/images/Gabe.png" style="width: calc(100% - 10px);"><br>
         </div><div style="background-color:#FFC0C7; margin-left: 4px; margin-right: 0px;">
           <h4>Video</h4>
-          <video autoplay muted loop height="400" style="width: 100%;"> <!--Attributes go here-->
+          <video autoplay muted loop height="400" style="width: calc(100% - 10px);"> <!--Attributes go here-->
             <source src="media/videos/video.mp4" type="video/mp4">
             <!--Controls attribute allows user to pause/play video, source must be followed by tag specifying video type-->
             <!--Chromium browsers do not allow Autoplay unless source is muted-->
@@ -127,7 +124,7 @@
         <br>Testing flex display and justify-content centre.
         <br>Text align center.
         <br>Trying inline block as per will. Moved vertical align. Removed -20px. 0 margins.
-        <br>Reformatted the semantics. Paddings instead of margins. 25% - 25px. Spaces. Adjusted fonts + will fix. 4px margins.
+        <br>Reformatted the semantics. Paddings instead of margins. 25% - 25px. Spaces. Adjusted fonts + will fix. 4px margins. Changes.
       </p>
   </body>
 </html>
