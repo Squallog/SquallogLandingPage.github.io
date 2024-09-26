@@ -4,56 +4,84 @@
   <header>
     <title>Landing Page Title</title> <!--The title is what appears in the tab topbar-->
     <style>
+     /*
+      Note:
+      All the font-face declarations here all apply to the same font, but different weights.
+      There are 4 verbose weights you can use: "normal", "bold", "lighter" and "bolder".
+      I've done this to allow you to apply the "Exo" font to all elements (as you seemed to be doing)
+      and set the weight independantly.
+     */
     @font-face {
-    font-family: 'ExoBold';
+    font-family:'Exo';
     src: local('Exo Bold'), local('Exo-Bold'),
         url('fonts/Exo-Bold.woff2') format('woff2'),
         url('fonts/Exo-Bold.woff') format('woff'),
         url('fonts/Exo-Bold.ttf') format('truetype');
-    font-weight: 700;
+    font-weight: bold;
     font-style: normal;
   }
   @font-face {
-    font-family: 'ExoLight';
+    font-family:'Exo';
     src: local('Exo Light'), local('Exo-Light'),
         url('Exo-Light.woff2') format('woff2'),
         url('Exo-Light.woff') format('woff'),
         url('Exo-Light.ttf') format('truetype');
-    font-weight: 300;
+    font-weight: normal;
     font-style: normal;
   }
   @font-face {
-    font-family: 'ExoExtraLight';
+    font-family:'Exo';
     src: local('Exo Extra Light'), local('Exo-Extra-Light'),
         url('fonts/Exo-ExtraLight.woff2') format('woff2'),
         url('fonts/Exo-ExtraLight.woff') format('woff'),
         url('fonts/Exo-ExtraLight.ttf') format('truetype');
-    font-weight: 200;
+    font-weight: lighter;
     font-style: normal;
   }
+
+  body{
+    font-family: "Exo";
+    font-weight: lighter;
+    margin: 0; /* margin needs to be set to 0 to stop a small white border around the screen */
+  }
+  /* the text is now pressing up against the side of the screen, to prevent this you could do the following:
+
+  body > *:not(.columns) {
+    padding: 0 100px;
+  }
+
+  selects all elements directly within the body that are not the "columns" class
+  */
+
   h1{
-    font-family: 'ExoBold';
+    font-weight: bold;
   }
   h2{
-    font-family: 'ExoLight';
+    font-weight: normal;
   }
   h3{
-    font-family: 'ExoLight';
+    font-weight: normal;
   }
   h4{
-    font-family: 'ExoExtraLight';
+    font-weight: lighter;
   }
-  body{
-    font-family: 'ExoExtraLight';
-  }
+
   div.columns {
-    margin: 0%;
+    margin: 0; /* If youre setting a value to 0 you dont need to define a value */
     width: 100%;
     background-color:#8dc5df;
   }
   div.columns > div {
-    width:calc(25% - 25px);
-    padding: 0px 10px;
+    width:calc(25% - 20px); /* this px value should be twice what the padding is on the line below */
+    padding: 0 10px; /* switch this padding to margin to get a gap between the columns
+
+    Or even mix and match to make up the 20px, for example:
+
+      padding: 5px; <- internal padding all around the edge of the column
+      margin: 0 5px; <- spacing of 5px either side of the column (adds up to 10px total)
+
+    */
+
     text-align: center;
     display: inline-block;
     vertical-align: top;
@@ -71,20 +99,17 @@
               Hyperlinks are created using an a suffix, including a href URL.
             </a><br>Hyperlinks can also be used to <a href="mailto:fakeemail@DontDoxxMyself.dumbass">send emails</a> using a mailto tag placed inside the href string.
           </p>
-        </div>
-        <div style="background-color:#FFC0C7;">
+        </div><div style="background-color:#FFC0C7;"> <!-- Notice no whitespace between the end of one div and the start of another (this is required to fully use the space). -->
           <h3>Non Paragraph Text</h3>
           <address>
             The address element<br>
             Creates left aligned text<br>
             In itallics<br>
           </address>
-        </div>
-        <div style="background-color:#FFF4A3;">
+        </div><div style="background-color:#FFF4A3;">
           <h4>Image</h4>
           <img src="media/images/Gabe.png"><br>
-        </div>
-        <div style="background-color:#FFC0C7;">
+        </div><div style="background-color:#FFC0C7;">
           <h4>Video</h4>
           <video autoplay muted loop height="400"> <!--Attributes go here-->
             <source src="media/videos/video.mp4" type="video/mp4">
