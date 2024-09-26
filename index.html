@@ -1,6 +1,9 @@
 <!--Commenting looks like this
  Standalone style blocks set global formatting within their segments.-->
-<style>
+<html>
+  <header>
+    <title>Landing Page Title</title> <!--The title is what appears in the tab topbar-->
+    <style>
     @font-face {
     font-family: 'ExoBold';
     src: local('Exo Bold'), local('Exo-Bold'),
@@ -55,50 +58,50 @@
     display: inline-block;
     vertical-align: top;
   }
-</style>
-<html>
-    <title>Landing Page Title</title> <!--The title is what appears in the tab topbar-->
-    <body>
-        <h1>Heading One Looks Like This</h1>
-        <p>Use h markers to create headings within a body. Use p markers to create paragraphs inside a body.</p>
-        <div class="columns"> <!--Divs are containers used to segment HTML elements-->
-          <div style="background-color:#FFF4A3;">
-            <h2>Heading Two Looks Like This</h2>
-            <p>Line breaks are inserted with a br suffix.<b> <br>Text can be made bold with a b suffix.</b> <br><i>An i suffix creates itallic text. </i><br>
-              <a href="https://www.pistonheads.com/buy/listing/17340806">
-                  Hyperlinks are created using an a suffix, including a href URL.
-              </a><br>Hyperlinks can also be used to <a href="mailto:fakeemail@DontDoxxMyself.dumbass">send emails</a> using a mailto tag placed inside the href string.
-            </p>
-          </div>
-          <div style="background-color:#FFC0C7;">
-            <h3>Non Paragraph Text</h3>
-            <address>
-              The address element<br>
-              Creates left aligned text<br>
-              In itallics<br>
-            </address>
-          </div>
-          <div style="background-color:#FFF4A3;">
-            <h4>Image</h4>
-            <img src="media/images/Gabe.png"><br>
-          </div>
-          <div style="background-color:#FFC0C7;">
-            <h4>Video</h4>
-            <video autoplay muted loop height="400"> <!--Attributes go here-->
-              <source src="media/videos/video.mp4" type="video/mp4">
-              <!--Controls attribute allows user to pause/play video, source must be followed by tag specifying video type-->
-              <!--Chromium browsers do not allow Autoplay unless source is muted-->
-            </video>
-         </div>
+    </style>
+  </header>
+  <body>
+      <h1>Heading One Looks Like This</h1>
+      <p>Use h markers to create headings within a body. Use p markers to create paragraphs inside a body.</p>
+      <div class="columns"> <!--Divs are containers used to segment HTML elements-->
+        <div style="background-color:#FFF4A3;">
+          <h2>Heading Two Looks Like This</h2>
+          <p>Line breaks are inserted with a br suffix.<b> <br>Text can be made bold with a b suffix.</b> <br><i>An i suffix creates itallic text. </i><br>
+            <a href="https://www.pistonheads.com/buy/listing/17340806">
+              Hyperlinks are created using an a suffix, including a href URL.
+            </a><br>Hyperlinks can also be used to <a href="mailto:fakeemail@DontDoxxMyself.dumbass">send emails</a> using a mailto tag placed inside the href string.
+          </p>
         </div>
-        <h1>Another Heading One</h1>
-        <p>
-          Exo Extra Light is used for body text now.
-          <br>Line break so I know this was updated.
-          <br>Changed back to inline block without overflow.
-          <br>Testing flex display and justify-content centre.
-          <br>Text align center.
-          <br>Trying inline block as per will. Moved vertical align. Removed -20px. 0 margins.
-        </p>
-    </body>
+        <div style="background-color:#FFC0C7;">
+          <h3>Non Paragraph Text</h3>
+          <address>
+            The address element<br>
+            Creates left aligned text<br>
+            In itallics<br>
+          </address>
+        </div>
+        <div style="background-color:#FFF4A3;">
+          <h4>Image</h4>
+          <img src="media/images/Gabe.png"><br>
+        </div>
+        <div style="background-color:#FFC0C7;">
+          <h4>Video</h4>
+          <video autoplay muted loop height="400"> <!--Attributes go here-->
+            <source src="media/videos/video.mp4" type="video/mp4">
+            <!--Controls attribute allows user to pause/play video, source must be followed by tag specifying video type-->
+            <!--Chromium browsers do not allow Autoplay unless source is muted-->
+          </video>
+        </div>
+      </div>
+      <h1>Another Heading One</h1>
+      <p>
+        Exo Extra Light is used for body text now.
+        <br>Line break so I know this was updated.
+        <br>Changed back to inline block without overflow.
+        <br>Testing flex display and justify-content centre.
+        <br>Text align center.
+        <br>Trying inline block as per will. Moved vertical align. Removed -20px. 0 margins.
+        <br>Reformatted the semantics.
+      </p>
+  </body>
 </html>
