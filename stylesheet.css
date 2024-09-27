@@ -33,6 +33,9 @@
         margin-left: auto;
         margin-right: auto;
     }
+    div.columns{
+        height: 60%;
+    }
 }
 @media(orientation: portrait){
     body{
@@ -44,6 +47,9 @@
     div.section{
         margin-left: 16px;
         margin-right: 16px;
+    }
+    div.columns{
+        height: 30%;
     }
 }
 /*
@@ -77,13 +83,11 @@ h4{
 }
 div.columns {
     margin: 0; /* If youre setting a value to 0 you dont need to define a value */
-    background-color:#8dc5df;
     display: flex;
     justify-content: space-between;
-    height: 60%;
 }
 div.columns > div {
-    background-color: rgba(22, 116, 170, 0.26);
+    background-color: rgb(232, 255, 255);
     width:calc(25% - 30px); /* this px value should be twice what the padding is on the line below */
     /* margin: 0 10px; /* switch this padding to margin to get a gap between the columns
 
@@ -99,7 +103,13 @@ div.columns > div {
     height: calc(100% - 20px);
     padding: 10px;
 }
-div.columns > div > div{
+div.columns > div > div.text{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    overflow: scroll;
+}
+div.columns > div > div.media{
     width: 100%;
     height: 100%;
     margin: auto;
