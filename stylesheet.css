@@ -25,6 +25,11 @@
     font-weight: lighter;
     font-style: normal;
 }
+@media screen and (max-width: 500px;) {
+    body{
+        background-color: aqua;
+    }
+}
 /*
       Note:
       All the font-face declarations here all apply to the same font, but different weights.
