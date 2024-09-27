@@ -1,0 +1,89 @@
+@font-face {
+    font-family:'Exo';
+    src: local('Exo Bold'), local('Exo-Bold'),
+        url('fonts/Exo-Bold.woff2') format('woff2'),
+        url('fonts/Exo-Bold.woff') format('woff'),
+        url('fonts/Exo-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family:'Exo';
+    src: local('Exo Light'), local('Exo-Light'),
+        url('Exo-Light.woff2') format('woff2'),
+        url('Exo-Light.woff') format('woff'),
+        url('Exo-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family:'Exo';
+    src: local('Exo Extra Light'), local('Exo-Extra-Light'),
+        url('fonts/Exo-ExtraLight.woff2') format('woff2'),
+        url('fonts/Exo-ExtraLight.woff') format('woff'),
+        url('fonts/Exo-ExtraLight.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+}
+/*
+      Note:
+      All the font-face declarations here all apply to the same font, but different weights.
+      There are 4 verbose weights you can use: "normal", "bold", "lighter" and "bolder".
+      I've done this to allow you to apply the "Exo" font to all elements (as you seemed to be doing)
+      and set the weight independantly.
+*/
+body{
+    outline: black solid 1px;    
+    font-family: "Exo";
+    font-weight: lighter;
+    margin: 0;
+}
+div.section{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    text-align: center;
+}
+h1{
+    font-weight: bold;
+}
+h2{
+    font-weight: bold;
+}
+h3{
+    font-weight: normal;
+}
+h4{
+    font-weight: normal;
+}
+div.columns {
+    margin: 0; /* If youre setting a value to 0 you dont need to define a value */
+    background-color:#8dc5df;
+    display: flex;
+    justify-content: space-between;
+}
+div.columns > div {
+    width:calc(25% - 6px); /* this px value should be twice what the padding is on the line below */
+    /* margin: 0 10px; /* switch this padding to margin to get a gap between the columns
+
+    Or even mix and match to make up the 20px, for example:
+
+      padding: 5px; <- internal padding all around the edge of the column
+      margin: 0 5px; <- spacing of 5px either side of the column (adds up to 10px total)
+
+    */
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+}
+div.columns > div img {
+    width: calc(100% - 10px);
+    object-fit: cover;
+    margin: 5px;
+}
+div.columns > div video {
+    width: calc(100% - 10px);
+    margin: 5px;
+}

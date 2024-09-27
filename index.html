@@ -2,129 +2,49 @@
  Standalone style blocks set global formatting within their segments.-->
 <html>
   <header>
-    <title>Landing Page Title</title> <!--The title is what appears in the tab topbar-->
-    <style>
-     /*
-      Note:
-      All the font-face declarations here all apply to the same font, but different weights.
-      There are 4 verbose weights you can use: "normal", "bold", "lighter" and "bolder".
-      I've done this to allow you to apply the "Exo" font to all elements (as you seemed to be doing)
-      and set the weight independantly.
-     */
-  @font-face {
-    font-family:'Exo';
-    src: local('Exo Bold'), local('Exo-Bold'),
-        url('fonts/Exo-Bold.woff2') format('woff2'),
-        url('fonts/Exo-Bold.woff') format('woff'),
-        url('fonts/Exo-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-  }
-  @font-face {
-    font-family:'Exo';
-    src: local('Exo Light'), local('Exo-Light'),
-        url('Exo-Light.woff2') format('woff2'),
-        url('Exo-Light.woff') format('woff'),
-        url('Exo-Light.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  @font-face {
-    font-family:'Exo';
-    src: local('Exo Extra Light'), local('Exo-Extra-Light'),
-        url('fonts/Exo-ExtraLight.woff2') format('woff2'),
-        url('fonts/Exo-ExtraLight.woff') format('woff'),
-        url('fonts/Exo-ExtraLight.ttf') format('truetype');
-    font-weight: lighter;
-    font-style: normal;
-  }
-  body{
-    font-family: "Exo";
-    font-weight: lighter;
-    margin: 0; /* margin needs to be set to 0 to stop a small white border around the screen */
-  }
-  /* the text is now pressing up against the side of the screen, to prevent this you could do the following:
-
-  body > *:not(.columns) {
-    padding: 0 100px;
-  }
-
-  selects all elements directly within the body that are not the "columns" class
-  */
-  h1{
-    font-weight: bold;
-  }
-  h2{
-    font-weight: bold;
-  }
-  h3{
-    font-weight: normal;
-  }
-  h4{
-    font-weight: normal;
-  }
-  div.columns {
-    margin: 0; /* If youre setting a value to 0 you dont need to define a value */
-    width: 100%;
-    background-color:#8dc5df;
-  }
-  div.columns > div {
-    width:calc(25% - 6px); /* this px value should be twice what the padding is on the line below */
-    /* margin: 0 10px; /* switch this padding to margin to get a gap between the columns
-
-    Or even mix and match to make up the 20px, for example:
-
-      padding: 5px; <- internal padding all around the edge of the column
-      margin: 0 5px; <- spacing of 5px either side of the column (adds up to 10px total)
-
-    */
-
-    text-align: center;
-    display: inline-block;
-    vertical-align: top;
-    object-fit: cover;
-  }
-    </style>
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Landing Page Title</title><!--The title is what appears in the tab topbar-->
   </header>
   <body>
+    <div class="section">
       <h1>Heading One Looks Like This</h1>
-      <p>Use h markers to create headings within a body. Use p markers to create paragraphs inside a body.</p>
-      <div class="columns"> <!--Divs are containers used to segment HTML elements-->
-        <div style="background-color:#FFF4A3; margin-left: 0px; margin-right: 4px;">
-          <h2>Heading Two Looks Like This</h2>
+      <p>Use h markers to create headings within a body. Use p markers to create paragraphs inside a body. Gonna add a bunch more text just to fill some space. I don't want to use Lorem Ipsum because that is basic and i am alreadu sick to death of Latin.</p>
+    </div><div class="columns"> <!--Divs are containers used to segment HTML elements-->
+      <div style="background-color:#FFF4A3;">
+        <h2>Heading Two Looks Like This</h2>
           <p>Line breaks are inserted with a br suffix.<b><br>Text can be made bold with a b suffix.</b><br><i>An i suffix creates itallic text.</i><br>
             <a href="https://www.pistonheads.com/buy/listing/17340806">
               Hyperlinks are created using an a suffix, including a href URL.
             </a><br>Hyperlinks can also be used to <a href="mailto:fakeemail@DontDoxxMyself.dumbass">send emails</a> using a mailto tag placed inside the href string.
           </p>
-        </div><div style="background-color:#FFC0C7; margin-left: 4px; margin-right: 4px;"> <!-- Notice no whitespace between the end of one div and the start of another (this is required to fully use the space). -->
-          <h3>Non Paragraph Text</h3>
-          <address>
-            The address element<br>
-            Creates left aligned text<br>
-            In itallics<br>
-          </address>
-        </div><div style="background-color:#FFF4A3; margin-left: 4px; margin-right: 4px;">
-          <h4>Image</h4>
-          <img src="media/images/Gabe.png" style="width: calc(100% - 10px);"><br>
-        </div><div style="background-color:#FFC0C7; margin-left: 4px; margin-right: 0px;">
-          <h4>Video</h4>
-          <video autoplay muted loop style="width: calc(100% - 10px);"> <!--Attributes go here-->
-            <source src="media/videos/video.mp4" type="video/mp4">
-            <!--Controls attribute allows user to pause/play video, source must be followed by tag specifying video type-->
-            <!--Chromium browsers do not allow Autoplay unless source is muted-->
-          </video>
-        </div>
+      </div><div style="background-color:#FFC0C7;"> <!-- Notice no whitespace between the end of one div and the start of another (this is required to fully use the space). -->
+        <h2>Non Paragraph Text</h2>
+        <address>
+          The address element<br>
+          Creates left aligned text<br>
+          In itallics<br>
+        </address>
+      </div><div style="background-color:#FFF4A3;">
+        <h2>Image</h2>
+        <img src="media/images/Gabe.png"><br>
+      </div><div style="background-color:#FFC0C7;">
+        <h2>Video</h2>
+        <video autoplay muted loop> <!--Attributes go here-->
+          <source src="media/videos/video.mp4" type="video/mp4">
+          <!--Controls attribute allows user to pause/play video, source must be followed by tag specifying video type-->
+          <!--Chromium browsers do not allow Autoplay unless source is muted-->
+        </video>
       </div>
-      <h1>Another Heading One</h1>
-      <p>
-        Exo Extra Light is used for body text now.
-        <br>Line break so I know this was updated.
-        <br>Changed back to inline block without overflow.
-        <br>Testing flex display and justify-content centre.
-        <br>Text align center.
-        <br>Trying inline block as per will. Moved vertical align. Removed -20px. 0 margins.
-        <br>Reformatted the semantics. Paddings instead of margins. 25% - 25px. Spaces. Adjusted fonts + will fix. 4px margins. Changes2.
-      </p>
+    </div>
+    <h1>Another Heading One</h1>
+    <p>
+      Exo Extra Light is used for body text now.
+      <br>Line break so I know this was updated.
+      <br>Changed back to inline block without overflow.
+      <br>Testing flex display and justify-content centre.
+      <br>Text align center.
+      <br>Trying inline block as per will. Moved vertical align. Removed -20px. 0 margins.
+      <br>Reformatted the semantics. Paddings instead of margins. 25% - 25px. Spaces. Adjusted fonts + will fix. 4px margins. Changes2. Style Sharted
+    </p>
   </body>
 </html>
