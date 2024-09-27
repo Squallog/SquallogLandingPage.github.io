@@ -25,7 +25,7 @@
     font-weight: lighter;
     font-style: normal;
 }
-@media screen (min-width:801px){
+@media(orientation: landscape){
     div.mobileMaster{
         display: none;
     }
@@ -34,7 +34,7 @@
         margin-right: auto;
     }
 }
-@media screen (max-width: 800px){
+@media(orientation: portrait){
     body{
         background-color: rgb(207, 224, 224);
     }
