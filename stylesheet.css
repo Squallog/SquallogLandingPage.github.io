@@ -25,6 +25,20 @@
     font-weight: lighter;
     font-style: normal;
 }
+/*
+      Note:
+      All the font-face declarations here all apply to the same font, but different weights.
+      There are 4 verbose weights you can use: "normal", "bold", "lighter" and "bolder".
+      I've done this to allow you to apply the "Exo" font to all elements (as you seemed to be doing)
+      and set the weight independantly.
+*/
+div{outline: 1px solid red;}
+div.columns {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
 @media(orientation: landscape){
     div.mobileMaster{
         display: none;
@@ -35,6 +49,19 @@
     }
     div.columns{
         height: 60%;
+        flex-direction: row;
+    }
+    div.columns > div{
+        width:calc(25% - 30px); /* this px value should be twice what the padding is on the line below */
+    /* margin: 0 10px; /* switch this padding to margin to get a gap between the columns
+
+    Or even mix and match to make up the 20px, for example:
+
+      padding: 5px; <- internal padding all around the edge of the column
+      margin: 0 5px; <- spacing of 5px either side of the column (adds up to 10px total)
+
+    */
+    height: calc(100% - 20px);
     }
 }
 @media(orientation: portrait){
@@ -49,16 +76,14 @@
         margin-right: 16px;
     }
     div.columns{
-        height: 30%;
+        height: 300%;
+        flex-direction: column;
+    }
+    div.columns > div {
+        width: 100%;
+        height: calc(25% - 30px);
     }
 }
-/*
-      Note:
-      All the font-face declarations here all apply to the same font, but different weights.
-      There are 4 verbose weights you can use: "normal", "bold", "lighter" and "bolder".
-      I've done this to allow you to apply the "Exo" font to all elements (as you seemed to be doing)
-      and set the weight independantly.
-*/
 body{
     font-family: "Exo";
     font-weight: lighter;
@@ -81,38 +106,29 @@ h3{
 h4{
     font-weight: normal;
 }
-div.columns {
-    margin: 0; /* If youre setting a value to 0 you dont need to define a value */
-    display: flex;
-    justify-content: space-between;
-}
 div.columns > div {
     background-color: rgb(232, 255, 255);
-    width:calc(25% - 30px); /* this px value should be twice what the padding is on the line below */
-    /* margin: 0 10px; /* switch this padding to margin to get a gap between the columns
-
-    Or even mix and match to make up the 20px, for example:
-
-      padding: 5px; <- internal padding all around the edge of the column
-      margin: 0 5px; <- spacing of 5px either side of the column (adds up to 10px total)
-
-    */
     text-align: center;
-    display: inline-block;
-    vertical-align: top;
-    height: calc(100% - 20px);
-    padding: 10px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    /* padding: 10px; */
 }
 div.columns > div > div.text{
-    width: 100%;
-    height: 100%;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    display: inherit;
+    place-items: inherit;
     margin: auto;
-    overflow: scroll;
+    padding: 0px;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 div.columns > div > div.media{
-    width: 100%;
-    height: 100%;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
     margin: auto;
+    padding: 0px;
     overflow: hidden;
 }
 div.columns > div img {
