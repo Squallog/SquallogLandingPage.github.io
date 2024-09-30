@@ -32,7 +32,18 @@
       I've done this to allow you to apply the "Exo" font to all elements (as you seemed to be doing)
       and set the weight independantly.
 */
-div{outline: 1px solid red; font-size: inherit;}
+html{
+    text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+}
+body{
+    font-family: "Exo";
+    font-weight: lighter;
+    margin: 0;
+}
+div{outline: 1px solid red;}
 div.columns {
     margin: 0;
     display: flex;
@@ -57,16 +68,8 @@ div.columns {
         flex-direction: row;
     }
     div.columns > div{
-        width:calc(25% - 30px); /* this px value should be twice what the padding is on the line below */
-    /* margin: 0 10px; /* switch this padding to margin to get a gap between the columns
-
-    Or even mix and match to make up the 20px, for example:
-
-      padding: 5px; <- internal padding all around the edge of the column
-      margin: 0 5px; <- spacing of 5px either side of the column (adds up to 10px total)
-
-    */
-    height: calc(100% - 20px);
+        width:calc(25% - 30px);
+        height: calc(100% - 20px);
     }
 }
 @media(orientation: portrait){
@@ -90,12 +93,6 @@ div.columns {
         height: calc(25% - 30px);
     }
 }
-body{
-    font-family: "Exo";
-    font-weight: lighter;
-    margin: 0;
-    font-size: medium;
-}
 div.section{
     margin-top: 20px;
     max-width: 1000px;
@@ -103,19 +100,15 @@ div.section{
 }
 h1{
     font-weight: bold;
-    font-size: xx-large;
 }
 h2{
     font-weight: bold;
-    font-size: larger;
 }
 h3{
     font-weight: normal;
-    font-size: larger;
 }
 h4{
     font-weight: normal;
-    font-size: larger;
 }
 div.columns > div {
     background-color: rgb(232, 255, 255);
@@ -132,7 +125,6 @@ div.columns > div > div.text{
     place-items: inherit;
     margin: auto;
     padding: 0px;
-    font-size: 16px;
     overflow-y: scroll;
     overflow-x: hidden;
 }
