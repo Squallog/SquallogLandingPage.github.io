@@ -25,9 +25,6 @@
     font-weight: lighter;
     font-style: normal;
 }
-div.text::-webkit-scrollbar{
-    display: none;
-}
 /*
       Note:
       All the font-face declarations here all apply to the same font, but different weights.
@@ -52,13 +49,16 @@ div.columns {
     display: flex;
     justify-content: space-between;
     overflow: hidden;
+}#
+div.text::-webkit-scrollbar{
+    display: none;
 }
-@media (orientation: landscape) and (width <= 1020px){
+@media (781px <= width) and (width <= 1020px){
     div.section{
         width: calc(100% - 10px);
     }
 }
-@media(Min-width: 721px){
+@media(Min-width: 781px){
     div.mobileMaster{
         display: none;
     }
@@ -145,4 +145,28 @@ div.columns > div img {
 }
 div.columns > div video {
     width: 100%;
+}
+a.button{
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
+    font-family: "Exo";
+    font-weight: light;
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: none;
+}
+a.button:hover{
+    background-color: rgb(248, 248, 248);
+    color: rgb(135, 135, 135);
+    font-weight: bold;
+    font-size: 17px;
+    padding: 3px 8px;
+}
+a.button:active{
+    background-color: rgb(231, 231, 231);
+    font-size: 16px;
+    padding: 5px 10px;
 }
