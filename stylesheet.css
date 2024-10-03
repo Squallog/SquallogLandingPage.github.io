@@ -53,12 +53,12 @@ div.columns {
     justify-content: space-between;
     overflow: hidden;
 }
-@media (781 <= width <= 1020px){
+@media (orientation: landscape) and (width <= 1020px){
     div.section{
         width: calc(100% - 10px);
     }
 }
-@media(781 <= width){
+@media(Min-width: 721px){
     div.mobileMaster{
         display: none;
     }
@@ -75,7 +75,7 @@ div.columns {
         height: calc(100% - 20px);
     }
 }
-@media(width <=780){
+@media(max-width: 780px){
     body{
         background-color: rgb(207, 224, 224);
     }
