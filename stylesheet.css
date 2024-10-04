@@ -49,7 +49,7 @@ div.columns {
     display: flex;
     justify-content: space-between;
     overflow: hidden;
-}#
+}
 div.text::-webkit-scrollbar{
     display: none;
 }
@@ -74,6 +74,11 @@ div.text::-webkit-scrollbar{
         width:calc(25% - 30px);
         height: calc(100% - 20px);
     }
+    div.foot{
+        display: grid;
+        grid-template-columns: 20% 20% 20%;
+        justify-content: space-between;
+    }
 }
 @media(max-width: 780px){
     div.mobileMaster{
@@ -91,6 +96,10 @@ div.text::-webkit-scrollbar{
     div.columns > div {
         width: 100%;
         height: calc(25% - 30px);
+    }
+    div.foot{
+        display: grid;
+        justify-content: center;
     }
 }
 div.section{
@@ -111,7 +120,7 @@ h4{
     font-weight: normal;
 }
 div.columns > div {
-    background-color: rgb(232, 255, 255);
+    background-color: whitesmoke;
     text-align: center;
     display: grid;
     place-items: center;
@@ -163,10 +172,12 @@ div.head{
     background-color: rgb(46, 46, 46);
     color: whitesmoke;
 }
+div.head > a{
+    font-size: 20px;
+    font-weight: bold;
+}
 div.foot{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    text-align: center;
     background-color: rgb(46, 46, 46);
     padding: 0 5%;
     border-top: 2px rgb(128, 128, 128) solid;
@@ -180,6 +191,7 @@ a.button{
     font-weight: light;
     font-size: 16px;
     text-decoration: none;
+    width: 100%;
     padding: 5px 10px;
     border-radius: 15px;
     border: none;
@@ -191,7 +203,15 @@ a.button:hover{
     padding: 5px 10px;
 }
 a.button:active{
-    background-color: rgb(231, 231, 231);
-    font-size: 14px;
+    background-color: rgb(112, 112, 112);
+    font-size: 16px;
     padding: 5px 10px;
+}
+div.head > a{
+    text-decoration: none;
+    color: inherit;
+    margin: 5px;
+}
+div.head > a:hover{
+    text-decoration: underline;
 }
