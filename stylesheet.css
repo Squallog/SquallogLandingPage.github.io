@@ -53,9 +53,10 @@ div.columns {
 div.text::-webkit-scrollbar{
     display: none;
 }
-@media (781px <= width <= 1020px){
+@media (781px <= width <= 1030px){
     div.section{
         width: calc(100% - 10px);
+        margin: 0 5px;
     }
 }
 @media(Min-width: 781px){
@@ -166,8 +167,10 @@ div.navbar{
     justify-content: space-between;
 }
 div.head{
+    text-align: center;
     display: grid;
     place-items: center;
+    padding: 0 10px;
     overflow: hidden;
     background-color: rgb(46, 46, 46);
     color: whitesmoke;
