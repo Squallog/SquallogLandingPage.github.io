@@ -122,6 +122,7 @@ h4{
     font-weight: normal;
 }
 div.columns > div {
+    z-index: -1;
     background-color: whitesmoke;
     text-align: center;
     display: grid;
@@ -143,7 +144,7 @@ div.columns > div > div.text{
 }
 div.columns > div > div.media{
     width: calc(100% - 10px);
-    height: calc(100% - 10px);
+    /*height: calc(100% - 10px);*/
     margin: auto;
     padding: 0px;
     overflow: hidden;
@@ -155,6 +156,7 @@ div.columns > div video {
     width: 100%;
 }
 div.navbar{
+    z-index: 100;
     overflow: hidden;
     padding: 0px 20px;
     background-color: rgb(128, 128, 128);
