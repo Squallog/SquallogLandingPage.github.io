@@ -170,12 +170,16 @@ div.navbar{
     justify-content: space-between;
 }
 div.head{
+    z-index: 1;
     text-align: center;
     display: grid;
     place-items: center;
     padding: 0 10px;
     overflow: hidden;
-    background-color: rgb(46, 46, 46);
+    background-image: url("/media/images/banner.rtc.png");
+    background-size: cover;
+    background-attachment: fixed;
+    /*background-color: rgb(46, 46, 46);*/
     color: whitesmoke;
 }
 div.head > a{
