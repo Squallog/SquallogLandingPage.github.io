@@ -44,7 +44,7 @@ body{
     font-weight: lighter;
     margin: 0;
 }
-/* div{outline: 1px solid red;} */
+/*div{outline: 1px solid red;}*/
 div.columns {
     margin: 0;
     display: flex;
@@ -109,20 +109,7 @@ div.section{
     max-width: 1000px;
     text-align: center;
 }
-h1{
-    font-weight: bold;
-}
-h2{
-    font-weight: bold;
-}
-h3{
-    font-weight: normal;
-}
-h4{
-    font-weight: normal;
-}
 div.columns > div {
-    z-index: -1;
     background-color: whitesmoke;
     text-align: center;
     display: grid;
@@ -139,8 +126,8 @@ div.columns > div > div.text{
     padding: 0px;
     overflow-y: scroll;
     overflow-x: hidden;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    /*-ms-overflow-style: none;
+    scrollbar-width: none;*/
 }
 div.columns > div > div.media{
     width: calc(100% - 10px);
@@ -170,11 +157,11 @@ div.navbar{
     justify-content: space-between;
 }
 div.head{
-    z-index: 1;
+    width: 100%;
     text-align: center;
     display: grid;
     place-items: center;
-    padding: 0 10px;
+    padding: 10px 0px;
     overflow: hidden;
     background-image: url("/media/images/banner.rtc.png");
     background-size: cover;
@@ -225,4 +212,16 @@ div.head > a{
 }
 div.head > a:hover{
     text-decoration: underline;
+}
+h1{
+    font-weight: bold;
+}
+h2{
+    font-weight: bold;
+}
+h3{
+    font-weight: normal;
+}
+h4{
+    font-weight: normal;
 }
