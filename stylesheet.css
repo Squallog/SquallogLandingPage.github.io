@@ -230,11 +230,32 @@ div.head > a:hover{
     text-decoration: underline;
 }
 div.sidescroll{
-    width: 100%;
-    display: inline-flex;
+    display: grid;
+    place-items: center;
+    width: 96%;
+    padding: 2%;
 }
-div.sidescroll > div{
-    width: 100vh;
+blockquote{
+    position: relative;
+}
+blockquote::before{
+    position: absolute;
+    left: 0;
+    margin-top: 2%;
+    margin-left: -5%;
+    content: open-quote;
+    font-size: 100;
+    vertical-align: top;
+    line-height: 0.5;
+}
+blockquote::after{
+    position: absolute;
+    right: 0;
+    margin-right: -5%;
+    content: close-quote;
+    font-size: 100;
+    vertical-align: bottom;
+    line-height: 0.5;
 }
 h1{
     font-weight: bold;
