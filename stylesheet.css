@@ -239,21 +239,23 @@ blockquote{
     position: relative;
 }
 blockquote::before{
-    position: absolute;
-    left: 0;
-    margin-top: 2%;
+    position: relative;
+    float: left;
+    margin-top: 1%;
     margin-left: -5%;
     content: open-quote;
-    font-size: 100;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 60;
     vertical-align: top;
     line-height: 0.5;
 }
 blockquote::after{
-    position: absolute;
-    right: 0;
+    position: relative;
+    float: right;
     margin-right: -5%;
     content: close-quote;
-    font-size: 100;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 60;
     vertical-align: bottom;
     line-height: 0.5;
 }
