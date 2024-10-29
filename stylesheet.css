@@ -181,6 +181,7 @@ div.head{
     overflow: hidden;
     background-image: url("/media/images/banner.rtc.png");
     background-size: cover;
+    background-color: black;
     background-position: 15%;
     /*background-color: rgb(46, 46, 46);*/
     color: whitesmoke;
