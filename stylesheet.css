@@ -235,6 +235,27 @@ div.sidescroll{
     width: 96%;
     padding: 2%;
 }
+.audio-player{
+    background-color: antiquewhite;
+}
+.background-container {
+    z-index: 1;
+    display: relative;
+    justify-content: center;
+    background-color: #DE5E97;
+    color: #fff;
+}
+.audio-icon {
+     width: 90%;
+     height: 90%;
+}
+button.audio-controls{
+    position: relative;
+    top: -200px;
+    height: 40%;
+    width: 40%;
+    z-index: 2;
+}
 blockquote{
     position: relative;
 }
