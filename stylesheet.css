@@ -61,7 +61,7 @@ div.text::-webkit-scrollbar{
     display: none;
 }
 @media (781px <= width <= 1030px){
-    div.section{
+    section{
         width: calc(100% - 10px);
         margin: 0 5px;
     }
@@ -70,7 +70,7 @@ div.text::-webkit-scrollbar{
     div.mobileMaster{
         display: none;
     }
-    div.section{
+    section{
         margin-left: auto;
         margin-right: auto;
     }
@@ -82,7 +82,7 @@ div.text::-webkit-scrollbar{
         width:calc(25% - 30px);
         height: calc(100% - 20px);
     }
-    div.foot{
+    footer{
         display: grid;
         grid-template-columns: 20% 20% 20%;
         justify-content: space-between;
@@ -92,7 +92,7 @@ div.text::-webkit-scrollbar{
     div.mobileMaster{
         display:initial;
     }
-    div.section{
+    section{
         margin-left: 16px;
         margin-right: 16px;
         width: auto;
@@ -105,17 +105,17 @@ div.text::-webkit-scrollbar{
         width: 100%;
         height: calc(25% - 30px);
     }
-    div.foot{
+    footer{
         display: grid;
         justify-content: center;
     }
 }
-div.desktopMaster{
+main{
     position: relative;
     background-color: white;
     z-index: 1;
 }
-div.section{
+section{
     margin-top: 20px;
     max-width: 1000px;
     text-align: center;
@@ -153,7 +153,7 @@ div.columns > div img {
 div.columns > div video {
     width: 100%;
 }
-div.navbar{
+navbar{
     z-index: 100;
     overflow: hidden;
     padding: 0px 20px;
@@ -167,7 +167,7 @@ div.navbar{
     flex-direction: row;
     justify-content: space-between;
 }
-div.head{
+header{
     z-index: 0;
     position: sticky;
     top: 0;
@@ -186,11 +186,11 @@ div.head{
     /*background-color: rgb(46, 46, 46);*/
     color: whitesmoke;
 }
-/*div.head > a{
+/*header > a{
     font-size: 20px;
     font-weight: bold;
 }*/
-div.foot{
+footer{
     text-align: center;
     background-color: rgb(46, 46, 46);
     padding: 0 5%;
@@ -222,15 +222,15 @@ a.button:active{
     font-size: 16px;
     padding: 5px 10px;
 }
-div.head > a{
+header > a{
     text-decoration: none;
     color: inherit;
     margin: 5px;
 }
-div.head > a:hover{
+header > a:hover{
     text-decoration: underline;
 }
-div.sidescroll{
+.sidescroll{
     display: grid;
     place-items: center;
     width: 96%;
