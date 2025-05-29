@@ -1,0 +1,215 @@
+@font-face {
+    font-family:'Exo';
+    src: local('Exo Bold'), local('Exo-Bold'),
+        url(/fonts/Exo-Bold.woff2) format('woff2'),
+        url(/assets/fonts/Exo-Bold.woff) format('woff'),
+        url(/fonts/Exo-Bold.ttf) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:'Exo';
+    src: local('Exo Light'), local('Exo-Light'),
+        url(/assets/fonts/Exo-Light.woff2) format('woff2'),
+        url(/assets/fonts/Exo-Light.woff) format('woff'),
+        url(/assets/fonts/Exo-Light.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:'Exo';
+    src: local('Exo Extra Light'), local('Exo-Extra-Light'),
+        url(/assets/fonts/Exo-ExtraLight.woff2) format('woff2'),
+        url(/assets/fonts/Exo-ExtraLight.woff) format('woff'),
+        url(/assets/fonts/Exo-ExtraLight.ttf) format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+html {
+    
+    scroll-behavior: smooth;
+}
+
+/* ====================================================================== */
+/* Headings */
+
+h1 {
+    font-weight: bold;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+h3 {
+    font-weight: normal;
+}
+
+h4 {
+    font-weight: normal;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Exo";
+}
+
+body {
+    padding: 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 60vh;
+    margin: 0;
+    padding-bottom: 20vh;
+    background-image: url(/media/images/banner.png);
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    text-shadow: 5px 5px black;
+}
+
+header > a:hover {
+    text-decoration: underline;
+}
+
+header > a , button > a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    width: 100vw;
+    position: absolute;
+    top: 45vh;
+    margin: auto;
+}
+
+section {
+    background-color: white;
+    border-left: 1vw solid black;
+    border-right: 1vw solid black;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+
+/* ===================================================================== */
+/* Projects Section */
+
+#projects {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    overflow: scroll;
+    background-color: rgb(255, 255, 255);
+    background-image: url(/media/images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
+}
+
+#projects > figure {
+    flex-shrink: 0;
+    background-color: rgba(255, 255, 255, 0.909);
+    height: 90%;
+    width: 400px;
+    margin: auto;
+    padding: 10px 5px 5px 5px;
+    border: 2px solid rgba(120, 120, 120, 0.676);
+}
+
+figure > img {
+    height: 200px;
+    max-width: 100%;
+}
+
+#projects > div {
+    flex-shrink: 0;
+    width: 10px;
+}
+
+/* ===================================================================== */
+/* Blockquotes */
+
+blockquote {
+    max-width: 70vw;
+    margin: 10px auto 10px auto;
+    padding: 5px;
+    font-style: italic;
+    border-top: 2px solid rgba(120, 120, 120, 0.676);
+}
+
+blockquote[blame]::after {
+    display: block;
+    content: "- "attr(blame);
+    font-style: normal;
+    color: rgb(159, 91, 91);
+    text-align: right;
+}
+
+/* ====================================================================== */
+/* Footer */
+
+nav {
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    height: 40px;
+    /* padding: 5px 5vw 5px 5vw; */
+    background-color: rgb(61, 61, 61);
+    display: flex;
+}
+
+nav > button {
+    width: 30vw;
+    margin: auto;
+    background-color: rgb(61, 61, 61);;
+    border: 5px solid  rgb(61, 61, 61);
+    border-radius: 5px;
+}
+
+nav > button:hover {
+    background-color:  rgb(128, 128, 128);
+    border: 5px solid rgb(128, 128, 128);;
+}
+
+footer {
+    height: 50px;
+    width: 100vw;
+    background-color: rgb(61, 61, 61);
+     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer > button {
+    margin: auto;
+    width: 30vw;
+    background-color: transparent;
+    border: 5px solid transparent;
+    border-radius: 5px;
+}
+
+footer > button:hover {
+    background-color: rgb(86, 86, 86);
+    border-color: rgb(86, 86, 86);
+}
+
+button > a {
+    width: 100%;
+}
+
+/* ====================================================================== */

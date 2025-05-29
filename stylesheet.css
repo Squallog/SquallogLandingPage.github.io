@@ -50,22 +50,18 @@ body{
     right: 0;
     background-color: black;
 }
-/*div{outline: 1px solid red;}*/
-div.columns {
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-    overflow: hidden;
-}
+
 div.text::-webkit-scrollbar{
     display: none;
 }
+
 @media (781px <= width <= 1030px){
     section{
         width: calc(100% - 10px);
         margin: 0 5px;
     }
 }
+
 @media(Min-width: 781px){
     div.mobileMaster{
         display: none;
@@ -74,14 +70,7 @@ div.text::-webkit-scrollbar{
         margin-left: auto;
         margin-right: auto;
     }
-    div.columns{
-        height: 60%;
-        flex-direction: row;
-    }
-    div.columns > div{
-        width:calc(25% - 30px);
-        height: calc(100% - 20px);
-    }
+
     footer{
         display: grid;
         grid-template-columns: 20% 20% 20%;
@@ -89,69 +78,35 @@ div.text::-webkit-scrollbar{
     }
 }
 @media(max-width: 780px){
-    div.mobileMaster{
+
+    .mobileMaster {
         display:initial;
     }
+
     section{
         margin-left: 16px;
         margin-right: 16px;
         width: auto;
     }
-    div.columns{
-        height: 300%;
-        flex-direction: column;
-    }
-    div.columns > div {
-        width: 100%;
-        height: calc(25% - 30px);
-    }
+
     footer{
         display: grid;
         justify-content: center;
     }
 }
+
 main{
+    margin: auto;
+    width: 95vw;
     position: relative;
     background-color: white;
+    overflow: hidden;
     z-index: 1;
 }
-section{
+section {
     margin-top: 20px;
     max-width: 1000px;
     text-align: center;
-}
-div.columns > div {
-    background-color: whitesmoke;
-    text-align: center;
-    display: grid;
-    place-items: center;
-    overflow: hidden;
-    /* padding: 10px; */
-}
-div.columns > div > div.text{
-    width: calc(100% - 10px);
-    height: calc(100% - 10px);
-    display: inherit;
-    place-items: inherit;
-    margin: auto;
-    padding: 0px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    /*-ms-overflow-style: none;
-    scrollbar-width: none;*/
-}
-div.columns > div > div.media{
-    width: calc(100% - 10px);
-    /*height: calc(100% - 10px);*/
-    margin: auto;
-    padding: 0px;
-    overflow: hidden;
-}
-div.columns > div img {
-    width: 100%;
-}
-div.columns > div video {
-    width: 100%;
 }
 navbar{
     z-index: 100;
@@ -196,7 +151,7 @@ footer{
     padding: 0 5%;
     border-top: 2px rgb(128, 128, 128) solid;
 }
-a.button{
+nav > a, footer, a{
     margin: 10px 0;
     background-color: rgba(255, 255, 255, 0);
     color: rgb(230, 230, 230);
@@ -210,53 +165,31 @@ a.button{
     border-radius: 15px;
     border: none;
 }
-a.button:hover{
+nav > a:hover , footer > a:hover {
     background-color: rgb(128, 128, 128);
     color: rgb(255, 255, 255);
     font-size: 16px;
     padding: 5px 10px;
 }
-a.button:active{
+nav > a:active , footer > a:active {
     background-color: rgb(112, 112, 112);
     color: rgb(230, 230, 230);
     font-size: 16px;
     padding: 5px 10px;
 }
-header > a{
-    text-decoration: none;
-    color: inherit;
-    margin: 5px;
-}
-header > a:hover{
-    text-decoration: underline;
-}
-.sidescroll{
-    display: grid;
-    place-items: center;
-    width: 96%;
-    padding: 2%;
-}
-.audio-player{
-    background-color: antiquewhite;
-}
-.background-container {
-    z-index: 1;
-    display: relative;
+
+#projects {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
-    background-color: #DE5E97;
-    color: #fff;
+    max-width: 1000px;
+    overflow-x: scroll;
 }
-.audio-icon {
-     width: 90%;
-     height: 90%;
+
+figure {
+    width: 30vw;
 }
-button.audio-controls{
-    position: relative;
-    top: -200px;
-    height: 40%;
-    width: 40%;
-    z-index: 2;
-}
+
 blockquote{
     position: relative;
 }
@@ -271,7 +204,7 @@ blockquote::before{
     vertical-align: top;
     line-height: 0.5;
 }
-blockquote::after{
+blockquote::after {
     position: relative;
     float: right;
     margin-right: -5%;
@@ -281,6 +214,12 @@ blockquote::after{
     vertical-align: bottom;
     line-height: 0.5;
 }
+
+em {
+    font-style: normal;
+    font-weight: bold;
+}
+
 h1{
     font-weight: bold;
 }
