@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rubik+Mono+One&display=swap');
+
+/* :root {
+    --borderColour: rgb(69, 69, 69);
+    --backgroundColour: rgb(255, 213, 0);
+    --contentArea: rgb(240, 245, 249);
+} */
+
+:root {
+    --borderColour: rgb(69, 69, 69);
+    --backgroundColour: rgb(169, 229, 243);
+    --contentArea: rgb(234, 237, 222);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: var(--backgroundColour);
+}
+
+main {
+    width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--contentArea);
+    padding: 15px;
+    padding-top: 70px;
+    border: 2px var(--borderColour) solid;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "nunito";
+}
+
+h1 {
+    position: absolute;
+    top: 5px;
+    left: calc(20vw - 5px);
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(155, 9, 155);
+    box-shadow: 5px 5px;
+    font-family: "Bungee";
+    margin-top: 0;
+}
+
+span {
+    color: white;
+    padding: 5px;
+}
+
+h2 {
+    text-align: center;
+    font-family: "Rubik Mono One";
+    font-size: 1.6rem;
+}
+
+button {
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: yellow;
+    border: 2px var(--borderColour) solid;
+    border-radius: 5px;
+    box-shadow: 2px 2px;
+}
+
+button > canvas {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+details {
+    overflow-y: hidden;
+    background-color: aqua;
+    border: 2px var(--borderColour) solid;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 2px;
+}
+
+summary {
+    background-color: yellow;
+    padding: 1px;
+    border-bottom: 2px var(--borderColour) solid;
+}
+
+::marker {
+    display: none;
+}
+
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+details > summary:first-of-type {
+    list-style-type: none;
+}
+
+details > section, nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+details > section > img {
+    width: 30%;
+    box-shadow: 5px 5px;
+}
+
+nav {
+    justify-content: space-between;
+}
+
+nav > button {
+    box-shadow: none;
+    border-radius: 0;
+    background-color: var(--contentArea);
+}
+
+.barContainer {
+    width: 50px;
+    height: min-content;
+    display: flex;
+    justify-content: space-around;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.bar {
+    height: 10px;
+    width: 0px;
+    border: 3px solid black;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+@keyframes bar {
+    from {height: 10px;}
+    to {height: 50px}
+}
