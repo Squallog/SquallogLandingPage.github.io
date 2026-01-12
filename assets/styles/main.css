@@ -178,7 +178,7 @@ footer > nav > a {
     to {height: 50px}
 }
 
-@media only screen and  (max-width: 750px) {
+@media only screen and (max-width: 750px) {
     main {
         width: 90vw !important;
         padding-top: 0px;
@@ -187,5 +187,5 @@ footer > nav > a {
     h1 {
         position: inherit;
         flex-wrap: wrap;
-    }
+    };
 };
