@@ -177,3 +177,14 @@ footer > nav > a {
     from {height: 10px;}
     to {height: 50px}
 }
+
+@media only screen and  (max-width: 750px) {
+    main {
+        width: 90vw !important;
+        padding-top: 0px;
+    };
+
+    h1 {
+        position: inherit;
+    }
+};
