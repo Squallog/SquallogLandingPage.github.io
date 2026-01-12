@@ -72,11 +72,6 @@ function makeObserver(node, index, array) {
 
 ctrlArray.forEach(makeObserver);
 
-function testContent(id) {
-    // console.log(document.getElementById(id));
-    return(document.getElementById(id).contentWindow);
-}
-
 // const observer = new MutationObserver(callBack);
 // observer.observe(imagingB, { attributes: true, attributeOldValue: true, childList: false, subtree: false });
 // report("imagingB");
