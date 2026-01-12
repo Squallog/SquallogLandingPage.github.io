@@ -186,5 +186,6 @@ footer > nav > a {
 
     h1 {
         position: inherit;
+        flex-wrap: wrap;
     }
 };
