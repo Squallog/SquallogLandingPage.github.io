@@ -10,11 +10,12 @@
         <title>Jeremy Goldsworthy - Sound Recording and Post Processing</title>
         <script src="./assets/scripts/audio.js"></script>
         <script src="./assets/scripts/barCSS.js" defer></script>
+        <script src="./assets/scripts/controls.js" defer></script>
     </head>
     <body>
         <main>
             <h1><span>Jeremy</span><span>Goldsworthy</span></h1>
-            <button id="imagingB" onclick="playout('imaging');animateButton('imagingB')">
+            <button id="imagingB" onclick="playout('imaging');animateButton('imagingB');">
                 <div class="barContainer" data-alignment="left">
                     <div class="bar"></div>
                     <div class="bar"></div>
@@ -22,7 +23,7 @@
                     <div class="bar"></div>
                 </div>
                 <h2>Radio Imaging</h2>
-                <audio src="" id="imaging">
+                <audio src="./assets/audio/imagingJan26.mp3" id="imaging" loop>
                 </audio>
                 <div class="barContainer">
                     <div class="bar"></div>
@@ -31,15 +32,15 @@
                     <div class="bar"></div>
                 </div>
             </button>
-            <button id="postProdB" onclick="playout('postProd');animateButton('postProdB')">
+            <button id="musicB" onclick="playout('music');animateButton('musicB')">
                 <div class="barContainer" data-alignment="left">
                     <div class="bar"></div>
                     <div class="bar"></div>
                     <div class="bar"></div>
                     <div class="bar"></div>
                 </div>
-                <h2>Sound Post-Production</h2>
-                <audio src="./assets/audio/musicJun24.mp3" id="postProd">
+                <h2>Music and Soundtracks</h2>
+                <audio src="./assets/audio/musicJun24.mp3" id="music" loop>
                 </audio>
                 <div class="barContainer">
                     <div class="bar"></div>
@@ -56,32 +57,15 @@
                     <button id="graphicsLeft"><</button>
                     <button id="graphicsRight">></button>
                 </nav>
-                <section id="poker">
-                    <iframe></iframe>
-                    <iframe></iframe>
-                </section>
-            </details>
-            <details id="props">
-                <summary>
-                    <h2>Prop Design</h2>
-                </summary>
-                <nav>
-                    <button id="propsLeft"><</button>
-                    <button id="propsRight">></button>
-                </nav>
-                <section>
-                    <img src="https://www.bigfootdigital.co.uk/wp-content/uploads/2020/07/image-optimisation-scaled.jpg">
-                    <img src="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/396e9/MainBefore.jpg">
-                    <img src="https://img.freepik.com/free-photo/closeup-scarlet-macaw-from-side-view-scarlet-macaw-closeup-head_488145-3540.jpg?semt=ais_hybrid&w=740&q=80">
+                <section id="after">
+                    <iframe class="frame" src="./assets/graphics/AHB/index.html" id="AHBCams"></iframe>
+                    <iframe class="controls" src="./assets/graphics/AHB/controls.html"></iframe>
                 </section>
             </details>
         </main>
         <footer>
             <nav>
-                <a>Gubbins</a>
-            </nav>
-            <nav>
-                <a>The Other Bits</a>
+                <a href="mailto:jeremygoldsworthy@jlukesound.co.uk">jeremygoldsworthy@jlukesound.co.uk</a>
             </nav>
         </footer>
     </body>

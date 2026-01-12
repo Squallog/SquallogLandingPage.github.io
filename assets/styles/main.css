@@ -18,6 +18,7 @@
 
 html {
     background-color: var(--backgroundColour);
+    font-family: "nunito";
 }
 
 main {
@@ -31,7 +32,6 @@ main {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-family: "nunito";
 }
 
 h1 {
@@ -69,6 +69,15 @@ button {
     box-shadow: 2px 2px;
 }
 
+button:hover {
+    color: rgb(57, 57, 57);
+}
+
+button:active {
+    background-color: rgb(244, 244, 57);
+    box-shadow: -2px -2px;
+}
+
 button > canvas {
     margin-top: auto;
     margin-bottom: auto;
@@ -81,6 +90,7 @@ details {
     margin: 5px;
     border-radius: 5px;
     box-shadow: 2px 2px;
+    transition: 0.3s;
 }
 
 summary {
@@ -88,6 +98,7 @@ summary {
     padding: 1px;
     border-bottom: 2px var(--borderColour) solid;
 }
+
 
 ::marker {
     display: none;
@@ -113,7 +124,20 @@ details > section > img {
     box-shadow: 5px 5px;
 }
 
+section > iframe {
+    width: 70%;
+    aspect-ratio: 16 / 9;
+    background-color: rgb(46, 46, 48);
+}
+
+.controls {
+    width: 20%;
+    padding: 0;
+}
+
 nav {
+    width: 100%;
+    display: flex;
     justify-content: space-between;
 }
 
@@ -121,6 +145,15 @@ nav > button {
     box-shadow: none;
     border-radius: 0;
     background-color: var(--contentArea);
+}
+
+footer {
+    display: flex;
+}
+
+footer > nav > a {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .barContainer {

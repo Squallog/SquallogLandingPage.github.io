@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Workbench&display=swap');
+
+:root {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "workbench";
+}
+
+header {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    height: 20vh;
+    width: calc(100vw - 20px);
+}
+
+footer {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    height: 20vh;
+    width: calc(100vw - 20px);
+}
+
+main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    font-size: 2rem;
+}
+
+object {
+    opacity: 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 300vh;
+    width: 100vw;
+    background-image: linear-gradient(
+        to bottom,
+        transparent, rgb(0, 0, 0), rgb(4, 0, 90), black, transparent,
+        rgb(26, 0, 96), transparent, black, transparent, rgb(0, 62, 17), transparent, black,
+        transparent, rgb(116, 1, 1), transparent, black, transparent, rgb(6, 0, 69), transparent,
+        black, transparent, rgb(14, 61, 0), transparent, black, transparent, rgba(103, 0, 0, 0.495),
+        transparent, black, transparent, rgb(29, 0, 70), transparent, black, transparent,
+        rgb(134, 0, 0), transparent, black, transparent, rgb(2, 0, 139), transparent, black,
+        transparent, rgb(0, 99, 7), transparent, black, transparent, rgb(149, 0, 0), transparent,
+        black, transparent, rgb(19, 0, 129), transparent, black, transparent, rgb(0, 109, 13), transparent,
+        black, transparent, rgb(152, 0, 0), transparent, black, transparent, rgb(0, 8, 120),
+        transparent, black, transparent, rgb(0, 126, 15), transparent, black, transparent,
+        rgb(159, 0, 0), transparent, black, transparent, rgb(6, 0, 125), transparent, black,
+        transparent, rgb(8, 101, 0), transparent, black, transparent, rgb(126, 0, 0), transparent, black,
+        rgb(0, 0, 90), black, transparent, rgb(0, 0, 0), rgb(4, 0, 90), black,
+        transparent, rgb(26, 0, 96), transparent, black, transparent, rgb(0, 105, 28), transparent, black,
+        transparent, rgb(108, 0, 0), transparent, black, transparent, rgb(11, 0, 132), transparent,
+        black, transparent, rgb(21, 90, 0), transparent, black, transparent, rgb(139, 0, 0),
+        transparent, black, transparent, rgb(46, 0, 110), transparent, black, transparent,
+        rgb(134, 0, 0), transparent, black, transparent, rgb(2, 0, 139), transparent, black,
+        transparent, rgb(0, 99, 7), transparent, black, transparent, rgb(149, 0, 0), transparent,
+        black, rgb(26, 0, 122), black,
+        transparent, black, transparent, rgb(19, 0, 129), transparent, black, transparent, rgb(0, 109, 13), transparent,
+        black, transparent, rgb(152, 0, 0), transparent, black, transparent, rgb(0, 8, 120),
+        transparent, black, transparent, rgb(0, 126, 15), transparent, black, transparent,
+        rgb(159, 0, 0), transparent, black, transparent, rgb(6, 0, 125), transparent, black,
+        transparent, rgb(8, 101, 0), transparent, black, transparent, rgb(126, 0, 0), transparent, black,
+        rgb(0, 0, 90), black
+    );
+    animation: scanLines 30s linear 0s infinite;
+}
+
+section {
+    overflow-x: visible;
+    animation: jitter 2s steps(20, start);
+    animation-iteration-count: infinite;
+}
+
+span {
+    margin: 2px;
+    white-space: nowrap;
+    display: inline-block;
+    width: fit-content;
+    font-size: 0.7rem;
+    background-color: gray;
+    color: gainsboro;
+}
+
+header > section , footer > section {
+    height: 100%;
+    width: 20vh;
+    padding: 5px;
+}
+
+header > :first-child {
+    position: absolute;
+    left: 0;
+    border-top: 2px solid whitesmoke;
+    border-left: 2px solid whitesmoke;
+}
+
+header > :last-child {
+    position: absolute;
+    right: 0;
+    border-top: 2px solid whitesmoke;
+    border-right: 2px solid whitesmoke;
+    direction: rtl;
+}
+
+footer > :first-child {
+    position: absolute;
+    left: 0;
+    border-bottom: 2px solid whitesmoke;
+    border-left: 2px solid whitesmoke;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+footer > :last-child {
+    position: absolute;
+    right: 0;
+    border-bottom: 2px solid whitesmoke;
+    border-right: 2px solid whitesmoke;
+    display: flex;
+    direction: rtl;
+    flex-direction: column-reverse;
+}
+
+section > button {
+    margin: 2px;
+    font-size: 0.5rem;
+    padding: 2px;
+    color: red;
+    /* width: 30px; */
+    /* height: 30px; */
+    /* border-radius: 15px; */
+    border: 2px solid gray;
+    /* background-color: rgb(177, 0, 0); */
+    margin: 0 10px 0 0;
+    animation: blink 3s steps(1, start);
+    animation-iteration-count: infinite;
+}
+
+section > span {
+    animation-name: blink;
+    animation: blink 5s steps(20, start);
+    animation-iteration-count: infinite;
+}
+
+/* ============================================================== */
+/* Animations */
+
+@keyframes blink {
+
+    50% {
+        visibility: hidden;
+    }
+
+}
+
+@-moz-keyframes blink {
+
+    50% {visibility: hidden;}
+
+}
+
+@keyframes jitter {
+
+    0%, 98% {
+        transform: skewX(0deg);
+    }
+
+    98.1%, 100% {
+        transform: skewX(30deg);
+    }
+
+}
+
+@keyframes scanLines {
+    0% {
+        transform: translateY(-200vh);
+    }
+
+    100% {
+        transform: translateY(0vh);
+    }
+}

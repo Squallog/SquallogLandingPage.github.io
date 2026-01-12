@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Overlay controls">
+        <meta name="author" content="Jeremy Goldsworthy">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/SquallogLandingPage.github.io/assets/styles/controls.css">
+        <title>Overlay controls</title>
+        <script src="./scripts/camControls.js" defer></script>
+    </head>
+    <body id="body" data-cam="1">
+        <header>
+            <h1>Controls</h1>
+        </header>
+        <main>
+            <form id="caption" onsubmit="capSubmit ('capInput');">
+                <label>Caption</label>
+                <input type="text" id="capInput">
+            </form>
+            <section>
+                <caption>Camera</caption>
+                <button onclick="iterateUp('data-cam');"><</button><button onclick="iterateDown('data-cam')">></button>
+            </section>
+        </main>
+        <footer>
+            <button id="reset">reset</button>
+        </footer>
+    </body>
+</html>
