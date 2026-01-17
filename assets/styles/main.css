@@ -22,12 +22,12 @@ html {
 }
 
 main {
-    width: 60vw;
+    width: 90vw !important;
+    padding: 15px;
+    padding-top: 0px;
     margin-left: auto;
     margin-right: auto;
     background-color: var(--contentArea);
-    padding: 15px;
-    padding-top: 70px;
     border: 2px var(--borderColour) solid;
     display: flex;
     flex-direction: column;
@@ -35,10 +35,8 @@ main {
 }
 
 h1 {
-    position: absolute;
-    top: 5px;
-    left: calc(20vw - 5px);
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     background-color: rgb(155, 9, 155);
     box-shadow: 5px 5px;
@@ -178,14 +176,16 @@ footer > nav > a {
     to {height: 50px}
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (min-width: 750px) {
     main {
-        width: 90vw !important;
-        padding-top: 0px;
+        width: 60vw !important;
+        padding-top: 70px;
     };
 
     h1 {
-        position: inherit;
-        flex-wrap: wrap !important;
+        position: absolute;
+        top: 5px;
+        left: calc(20vw - 5px);
+        flex-wrap: nowrap !important;
     };
 };
