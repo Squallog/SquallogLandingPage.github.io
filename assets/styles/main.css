@@ -10,13 +10,17 @@
     --borderColour: rgb(69, 69, 69);
     --backgroundColour: rgb(169, 229, 243);
     --contentArea: rgb(234, 237, 222);
+    --headColour: rgb(155, 9, 155);
+    --sectionTag: yellow;
+    --sectionTagHover: rgb(244, 244, 57);
+    --sectionBackground: aqua;
 }
 
 * {
     box-sizing: border-box;
 }
 
-html {
+body{
     background-color: var(--backgroundColour);
     font-family: "nunito";
 }
@@ -38,10 +42,11 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: rgb(155, 9, 155);
+    background-color: var(--headColour);
     box-shadow: 5px 5px;
     font-family: "Bungee";
     margin-top: 0;
+    padding: 0 10px 0 10px;
 }
 
 span {
@@ -61,7 +66,7 @@ button {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: yellow;
+    background-color: var(--sectionTag);
     border: 2px var(--borderColour) solid;
     border-radius: 5px;
     box-shadow: 2px 2px;
@@ -69,10 +74,11 @@ button {
 
 button:hover {
     color: rgb(57, 57, 57);
+    background-color: var(--sectionTagHover);
 }
 
 button:active {
-    background-color: rgb(244, 244, 57);
+    background-color: var(--sectionTagHover);
     box-shadow: -2px -2px;
 }
 
@@ -83,7 +89,7 @@ button > canvas {
 
 details {
     overflow-y: hidden;
-    background-color: aqua;
+    background-color: var(--sectionBackground);
     border: 2px var(--borderColour) solid;
     margin: 5px;
     border-radius: 5px;
@@ -92,11 +98,19 @@ details {
 }
 
 summary {
-    background-color: yellow;
+    background-color: var(--sectionTag);
     padding: 1px;
     border-bottom: 2px var(--borderColour) solid;
 }
 
+summary:hover {
+    color: rgb(57, 57, 57);
+    background-color: var(--sectionTagHover);
+}
+
+details > p, h2, h3 {
+    padding: 0 10px 0 10px;
+}
 
 ::marker {
     display: none;
