@@ -38,6 +38,12 @@ main {
     min-height: 100vh;
 }
 
+img {
+    width: 70%;
+    margin: 10px;
+    border: 2px solid var(--borderColour);
+}
+
 h1 {
     display: flex;
     flex-wrap: wrap;
