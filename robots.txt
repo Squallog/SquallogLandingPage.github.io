@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /assets/pages/gubbins
+Disallow: /assets/audio/
+Disallow: /assets/graphics/
+Disallow: /assets/images/
