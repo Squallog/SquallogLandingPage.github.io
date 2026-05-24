@@ -6,30 +6,53 @@
         <meta name="keywords" content="Sound Recordist, Post-Production, Manchester">
         <meta name="author" content="Jeremy Goldsworthy">
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-        <link rel="stylesheet" href="../../styles/main.css">
+        <link rel="stylesheet" href="../../styles/warship.css">
         <title>Jeremy Goldsworthy - Warship</title>
         <script src="../../scripts/gubbins.js" defer></script>
-        <style>
-            body {
-                --backgroundColour: rgb(148, 103, 114);
-                --headColour: rgb(233, 215, 24);
-                --sectionTag: rgb(229, 235, 55);
-                --sectionTagHover: rgb(225, 230, 90);
-                --sectionBackground: rgb(106, 225, 196);
-            }
-        </style>
     </head>
     <body>
         <h1>Warship</h1>
         <main>
-            <details>
-                <summary>
-                    <h2></h2>
-                    <p>
-                        This is a paragraph inside of a summary tag. I am unsure how this will behave.
-                    </p>
-                </summary>
-            </details>
+            <section id="turrets">
+                <h2>THE TURRETS</h2>
+                <h3>Main Weapons</h3>
+                <p>
+                    There are four primary turrets, each with three servos - 2 for gun elevation and 1 for turret traverse. These turrets are each controlled by an <em>Arduino Uno</em> which communicates with a 
+                    <em>Raspberry Pi</em> using an I2C protocol. The <em>Arduino Uno</em> has a JSON file containing the name and positioning of the turret, these parameters are broadcast through I2C, 
+                    facilitating "plug and play" functionality between the turrets and central control unit.
+                </p>
+                <h4>Turret Module</h4>
+                <p>
+                    The turret module is an <em>Arduino Uno</em> running a <em>Circuit Python</em> script which transmits turret parameters to the central control module while receiving tareting commands and aiming the 
+                    turrets accordingly. This module is responsible for controlling traverse (axial) and elevation. Traverse movement is controled using a 3 volt DC motor, a potentiometer reading is used to determine 
+                    turret position. Two microswitches are placed at the extreme limits of turret rotation, on boot the turret is rotated left and then right until it triggers the respective microswitch. Potentiometer 
+                    values are taken at each of the potentiometer triggers, these values are used to calibrate the relationship between potentiometer value and turret position.
+                </p>
+                <h4>Control Module</h4>
+                <p>
+                    A <em>Raspberry Pi</em> acts as a hub, connecting to all of the turrets (primary, secondary, and otherwise) through I2C cables. Commands are received from a web server hosted remotely, with a SIM 
+                    card facilitating communication. The module receives data telling it the position of a target relative to the center of the boat. Traverse instructions are calculated using the position of each 
+                    turret (retreived from JSON data inside the turret modules) relative to the center of the boat.
+                </p>
+                <h2>Secondary Turrets</h2>
+                <p>
+                    There are 6 secondary turrets, each with 2 servos - 1 for elevation and 1 for traverse.
+                </p>
+                <h2>Air Defence Turrets</h2>
+                <p>
+                    There are 8 air defence turrets, these turrets do not have sufficient space inside for any servos or electronics. Elevation and traverse control is acheived using a pair of bicycle brake cables. 
+                    An <em>F 696Z</em> flange bearing acts as the turret ring, a 6mm diameter basket protrudes through the bearing, with a small connecting horn extending from below such that a brake cable can traverse 
+                    the turret. A hole of diameter 1.5mm allows a second cable to pass through, with a 5mm socket at its opening to connect the cable housing. Inside the anti aircraft turret, a compression spring 
+                    keeps the cable under tension and ensures that the turret will elevate when the cable is relaxed.
+                </p>
+            </section>
+            <section id="superstructure">
+                <h2>THE SUPERSTRUCTURE</h2>
+                <p>
+                    The superstructure is built around a wooden framework, assembled from lasercut plywood peices, with vertical supports being cut from 6mm ply and horizontal members cut from 3mm. Once complete, 
+                    plastic paneling will be fixed around the framework. The funnel and foremast are built using 3D printer parts, facilitating their more complex curved geometry.
+                </p>
+            </section>
         </main>
         <footer>
             <nav>

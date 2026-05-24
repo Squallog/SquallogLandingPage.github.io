@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <!-- <link rel="stylesheet" href="./timerStyles.css"> -->
+  </head>
+  <body>
+    <main>
+      <h1 id="time"></h1>
+    </main>
+    <script type="text/javascript" defer>
+      const timer = document.getElementById("time"),
+        start = new Date("2026-05-08T09:00:00"),
+        startTime = start.getTime();
+      
+      function tickTimer(timer, startTime){
+        let now = new Date(),
+          nowMs = now.getTime(),
+          delta = nowMs - startTime,
+          deltaDate = new Date(delta),
+          hour = String(deltaDate.getHours()).padStart(2,"0"),
+          minute = String(deltaDate.getMinutes()).padStart(2,"0"),
+          second = String(deltaDate.getSeconds()).padStart(2, "0");
+        timer.innerText=`${hour}:${minute}:${second}`;
+      };
+
+      setInterval( () => {
+        tickTimer(timer, startTime)
+      }, 1000);
+    </script>
+  </body>
+</html>
