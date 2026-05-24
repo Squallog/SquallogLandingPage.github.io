@@ -13,6 +13,15 @@
     <body>
         <h1>Warship</h1>
         <main>
+            <section id="preface">
+                <p>
+                    Warship is a 1:72 scale replica of the battleship <em>Bisamrck</em>. I inherrited the project a number of years ago, by which point the hull had been fully constructed but was lacking a 
+                    superstructure. While I don't find scale modelling particularly appealing, I do think the project has enormous potential as a platform for electronics and software engineering. With a hull 
+                    exceeding 3 metres, and superstructure exceeding 1.5, the space available for control systems and functionality is immense. My objective with <em>Warship</em> is to build a model which 
+                    facilitates control of all turrets, cranes, and searchlights. I am aware of 3 other models depicting the same boat at the same scale, while the level of cosmetic detail is impressive, none 
+                    have achived such a level of functionality.
+                </p>
+            </section>
             <section id="turrets">
                 <h2>THE TURRETS</h2>
                 <h3>Main Weapons</h3>
@@ -46,11 +55,49 @@
                     keeps the cable under tension and ensures that the turret will elevate when the cable is relaxed.
                 </p>
             </section>
+            <section id="machinery">
+                <h2>THE MACHINERY</h2>
+                <p>
+                </p>
+            </section>
             <section id="superstructure">
                 <h2>THE SUPERSTRUCTURE</h2>
                 <p>
                     The superstructure is built around a wooden framework, assembled from lasercut plywood peices, with vertical supports being cut from 6mm ply and horizontal members cut from 3mm. Once complete, 
                     plastic paneling will be fixed around the framework. The funnel and foremast are built using 3D printer parts, facilitating their more complex curved geometry.
+                </p>
+            </section>
+            <section id="control">
+                <h2>CONTROL SYSTEM(S)</h2>
+                <p>
+                    Two control systems are used - 1 for propulsion and steering, and a second for auxilliary functions. The two control systems are fully isolated circuits, each running from their own batteries. 
+                </p>
+                <h3>Propulsion</h3>
+                <p>
+                    The propulsion and steering is controlled using a conventional radio receiver and transmitter. This is a simple system with high reliability that, most importantly, requires no supporting 
+                    infrastructure to operate; the transmitter is always able to communicate with the receiver so long as the boat is within its range.
+                </p>
+                <h3>Auxiliary Functions</h3>
+                <p>
+                    Auxilliary functions are controlled through a web-based system. A SIM card will be connected to a <em>Raspberry Pi</em> computer housed within the superstructure. This will communicate with a 
+                    server hosted elsewhere; a client running on a laptop - also conencted via SIM card - will be sent a control panel from the boat and will send comands into the server. Commands will be relayed 
+                    into the computer on the boat, which will execute a corresponding function (i.e. aiming turrets). The advantage to this system is twofold: electronics aboard the boat can perform advanced tasks 
+                    such as converging turrets at a single target or performing a routine; additionally, internet connections are not constrained to a fixed number of channels - this means far more functions can be 
+                    controlled than would be possible using a conventional radio system. With this said, the drawbacks are also twofold: a cellular connection must be available in oder to use auxilliary functions; 
+                    and the use of a server introduces a dependency on external infrastructure - if the server goes down while the boat is operating, I will not be able to access it to reboot the system.
+                </p>
+            </section>
+            <section id="reference">
+                <h2>REFERENCE MATERIAL</h2>
+                <h3>Anatomy of the Ship - The Battleship Bismarck</h3>
+                <p>
+                    All reference imagery and diagrams used in the design and assembly of the turrets, superstructure, and machinery are taken from <em>Anatomy of the Ship - The Battleship Bismarck</em>, written 
+                    by <em> Stefan Draminski</em>. To my knowledge this is the most comprehensive collection of drawings and diagrams for this boat.
+                </p>
+                <h3>German Admiralty</h3>
+                <p>
+                    During hull prototyping and construction, prior to my inherritance of the project, measrements were requested directly from German admiralty archives. Letters from this correspondance have been preserved in an album compiled prior 
+                    to my inherritance of the project.
                 </p>
             </section>
         </main>
