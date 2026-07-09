@@ -10,8 +10,9 @@
         <title>Jeremy Goldsworthy - Sound Recording and Post Processing</title>
         <script src="./assets/scripts/audio.js"></script>
         <script src="./assets/scripts/barCSS.js" defer></script>
-        <script src="./assets/scripts/controls.js" defer></script>
+        <!-- <script src="./assets/scripts/controls.js" defer></script> -->
         <script src="./assets/scripts/gubbins.js" defer></script>
+        <script src="./assets/scripts/emLink.js"></script>
     </head>
     <body>
         <main>
@@ -50,7 +51,7 @@
                     <div class="bar"></div>
                 </div>
             </button>
-            <details id="graphics">
+            <!-- <details id="graphics">
                 <summary>
                     <h2>Live Graphics</h2>
                 </summary>
@@ -62,12 +63,21 @@
                     <iframe class="frame" src="./assets/graphics/AHB/index.html" id="AHBCams"></iframe>
                     <iframe class="controls" src="./assets/graphics/AHB/controls.html"></iframe>
                 </section>
-            </details>
+            </details> -->
+            <!-- <details id="blinkNine">
+                <summary>
+                    <h2>Blink Nine</h2>
+                </summary>
+                <p>A creative partnership telling stories through puppetry, props, and sound.</p>
+                <ul>
+                    <li></li>
+                </ul>
+            </details> -->
         </main>
         <footer>
             <nav>
-                <!-- <a href="mailto:jeremygoldsworthy@jlukesound.co.uk">jeremygoldsworthy@jlukesound.co.uk</a> -->
-                <a href="/assets/pages/gubbins/terrarium.html" id="gubButton">gubbins</a>
+                <button title="Square brackets '[]' added to protect address from robots, clik to copy without brackets. (or substitute the correct characters yourself)" onclick="emaLink(this)">jeremygoldsworthy [at] jlukesound [dot] co [dot] uk</button>
+                <button><a href="/assets/pages/gubbins/terrarium.html" id="gubButton">gubbins</a></button>
             </nav>
         </footer>
     </body>
