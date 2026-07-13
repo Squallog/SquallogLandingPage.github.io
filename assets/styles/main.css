@@ -142,6 +142,20 @@ details > section > img {
     box-shadow: 5px 5px;
 }
 
+details > picture {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-items: center;
+    row-gap: 0;
+    padding: 10px;
+}
+
+picture > img {
+    width: 100%;
+    border: none;
+    margin: 0px;
+}
+
 section > iframe {
     width: 70%;
     aspect-ratio: 16 / 9;
