@@ -8,12 +8,12 @@
 
 :root {
     --borderColour: rgb(69, 69, 69);
-    --backgroundColour: rgb(169, 229, 243);
+    --backgroundColour: rgb(245, 224, 161);
     --contentArea: rgb(234, 237, 222);
-    --headColour: rgb(155, 9, 155);
-    --sectionTag: yellow;
-    --sectionTagHover: rgb(244, 244, 57);
-    --sectionBackground: aqua;
+    --headColour: rgb(9, 136, 155);
+    --sectionTag: rgb(235, 235, 161);
+    --sectionTagHover: rgb(255, 231, 53);
+    --sectionBackground: rgb(60, 54, 48);
 }
 
 * {
@@ -78,8 +78,8 @@ button {
     box-shadow: 2px 2px;
 }
 
-button:hover {
-    color: rgb(57, 57, 57);
+button:hover, summary:hover {
+    color: rgb(19, 21, 24);
     background-color: var(--sectionTagHover);
 }
 
@@ -107,11 +107,6 @@ summary {
     background-color: var(--sectionTag);
     padding: 1px;
     border-bottom: 2px var(--borderColour) solid;
-}
-
-summary:hover {
-    color: rgb(57, 57, 57);
-    background-color: var(--sectionTagHover);
 }
 
 details > p, h2, h3 {
