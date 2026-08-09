@@ -113,6 +113,10 @@ details > p, h2, h3 {
     padding: 0 10px 0 10px;
 }
 
+details p {
+    color: whitesmoke;
+}
+
 ::marker {
     display: none;
 }
