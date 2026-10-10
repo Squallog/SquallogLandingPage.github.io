@@ -93,7 +93,7 @@ button > canvas {
     margin-bottom: auto;
 }
 
-details {
+details, section {
     overflow-y: hidden;
     background-color: var(--sectionBackground);
     border: 2px var(--borderColour) solid;
@@ -113,7 +113,7 @@ details > p, h2, h3 {
     padding: 0 10px 0 10px;
 }
 
-details p {
+details p, ul {
     color: whitesmoke;
 }
 
@@ -159,6 +159,19 @@ section > iframe {
     width: 70%;
     aspect-ratio: 16 / 9;
     background-color: rgb(46, 46, 48);
+}
+
+#vidPort {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+#vidPort > iframe {
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+    border-radius: 5px;
 }
 
 .controls {
