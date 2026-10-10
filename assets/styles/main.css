@@ -204,6 +204,22 @@ footer > nav > a {
     margin-bottom: auto;
 }
 
+.videoScroller {
+    overflow-x: scroll;
+    display: flex;
+    justify-content: space-between;
+    width: calc(90vw - 40px);
+    margin: 5px auto 5px auto;
+}
+
+.videoScroller > iframe {
+    border: none;
+    width: calc(90vw - 40px);
+    aspect-ratio: 16/9;
+    min-width: 321px;
+    flex-shrink: 0;
+}
+
 @keyframes bar {
     from {height: 10px;}
     to {height: 50px}
@@ -221,4 +237,12 @@ footer > nav > a {
         left: calc(20vw - 5px);
         flex-wrap: nowrap !important;
     };
+
+    .videoScroller {
+        width: 90%;
+    }
+
+    .videoScroller > iframe {
+        width: 100%;
+    }
 };
