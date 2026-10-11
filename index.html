@@ -3,7 +3,7 @@
     <head>   
         <meta charset="UTF-8">
         <meta name="description" content="Jeremy Goldsworthy - Sound recordist and post-production.">
-        <meta name="keywords" content="Sound Recordist, Post-Production, Manchester">
+        <meta name="keywords" content="Sound Recordist, Post-Production, United Kingdom, England, AV">
         <meta name="author" content="Jeremy Goldsworthy">
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
         <link rel="stylesheet" href="./assets/styles/main.css">
@@ -56,24 +56,13 @@
                     <h2>Latest Album</h2>
                 </summary>
                 <section>
-                    <iframe id="bandcampPlayer" style="width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=1069857484/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/artwork=small/transparent=true/" seamless>
-                        <a href="https://jeremy-goldsworthy.bandcamp.com/album/sketchbooks">Sketchbooks by Jeremy Goldsworthy</a>
-                    </iframe>
+                    <noscript>
+                        <iframe id="bandcampPlayer" style="width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=1069857484/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/artwork=small/transparent=true/" seamless>
+                            <a href="https://jeremy-goldsworthy.bandcamp.com/album/sketchbooks">Sketchbooks by Jeremy Goldsworthy</a>
+                        </iframe>
+                    </noscript>
                 </section>
             </details>
-            <!-- <details id="graphics">
-                <summary>
-                    <h2>Live Graphics</h2>
-                </summary>
-                <nav>
-                    <button id="graphicsLeft"><</button>
-                    <button id="graphicsRight">></button>
-                </nav>
-                <section id="after">
-                    <iframe class="frame" src="./assets/graphics/AHB/index.html" id="AHBCams"></iframe>
-                    <iframe class="controls" src="./assets/graphics/AHB/controls.html"></iframe>
-                </section>
-            </details> -->
             <details id="photography">
                 <summary>
                     <h2>Photography</h2>
@@ -98,22 +87,23 @@
                     <iframe src="https://www.youtube.com/embed/Y6S7UjxTmmc?rel=0&iv_load_policy-3"  allowfullscreen scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;" referrerpolicy="strict-origin"></iframe>
                 </div>
             </details>
-            <details id="blinkNine">
+            <details id="blinkNine" data-hasVideoEmbeds>
                 <summary>
                     <h2>Blink Nine</h2>
                 </summary>
                 <div class="videoScroller">
-                    <iframe src="https://www.youtube.com/embed/EYvPvaRfkZc?rel=0&iv_load_policy=3" allowfullscreen scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; web-share *;" referrerpolicy="strict-origin"></iframe>
-                    <iframe src="https://www.youtube.com/embed/2K-UCInhf1U?rel=0&iv_load_policy=3" allowfullscreen scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *;  web-share *;" referrerpolicy="strict-origin"></iframe>
-                    <iframe src="https://www.youtube.com/embed/6Lc1jmYD5fc?rel=0&iv_load_policy=3" allowfullscreen scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *;  web-share *;" referrerpolicy="strict-origin"></iframe>
+                    <iframe data-lowRes src="https://www.youtube.com/embed/EYvPvaRfkZc?rel=0&iv_load_policy=3" allowfullscreen scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; web-share *;" referrerpolicy="strict-origin"></iframe>
+                    <iframe data-lowRes src="https://www.youtube.com/embed/2K-UCInhf1U?rel=0&iv_load_policy=3" allowfullscreen scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *;  web-share *;" referrerpolicy="strict-origin"></iframe>
+                    <iframe data-lowRes src="https://www.youtube.com/embed/6Lc1jmYD5fc?rel=0&iv_load_policy=3" allowfullscreen scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *;  web-share *;" referrerpolicy="strict-origin"></iframe>
                 </div>
             </details>
         </main>
         <footer>
             <nav>
                 <button title="Square brackets '[]' added to protect address from robots, clik to copy without brackets. (or substitute the correct characters yourself)" onclick="emaLink(this)">jeremygoldsworthy [at] jlukesound [dot] co [dot] uk</button>
-                <button><a href="/assets/pages/gubbins/terrarium.html" id="gubButton">gubbins</a></button>
+                <button><a href="./assets/pages/gubbins/terrarium.html" id="gubButton">gubbins</a></button>
             </nav>
         </footer>
+        <script src="./assets/scripts/embedRefresh.js" defer></script>
     </body>
 </html>
