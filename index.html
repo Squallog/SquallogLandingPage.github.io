@@ -79,24 +79,23 @@
                     <img src="assets/images/photography/bricks.JPG" alt="The sun reflecting off a brick wall">
                 </picture>
             </details>
-            <details id="blinkNine">
+            <details id="blinkNine" data-hasVideoEmbeds>
                 <summary>
                     <h2>Blink Nine</h2>
                 </summary>
-                <noscript>
-                    <div class="videoScroller">
-                        <iframe src="https://www.youtube.com/embed/EYvPvaRfkZc?rel=0&iv_load_policy=3" allowfullscreen scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; web-share *;" referrerpolicy="strict-origin"></iframe>
-                        <iframe src="https://www.youtube.com/embed/2K-UCInhf1U?rel=0&iv_load_policy=3" allowfullscreen scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *;  web-share *;" referrerpolicy="strict-origin"></iframe>
-                        <iframe src="https://www.youtube.com/embed/6Lc1jmYD5fc?rel=0&iv_load_policy=3" allowfullscreen scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *;  web-share *;" referrerpolicy="strict-origin"></iframe>
-                    </div>
-                </noscript>
+                <div class="videoScroller">
+                    <iframe data-lowRes src="https://www.youtube.com/embed/EYvPvaRfkZc?rel=0&iv_load_policy=3" allowfullscreen scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; web-share *;" referrerpolicy="strict-origin"></iframe>
+                    <iframe data-lowRes src="https://www.youtube.com/embed/2K-UCInhf1U?rel=0&iv_load_policy=3" allowfullscreen scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *;  web-share *;" referrerpolicy="strict-origin"></iframe>
+                    <iframe data-lowRes src="https://www.youtube.com/embed/6Lc1jmYD5fc?rel=0&iv_load_policy=3" allowfullscreen scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *;  web-share *;" referrerpolicy="strict-origin"></iframe>
+                </div>
             </details>
         </main>
         <footer>
             <nav>
                 <button title="Square brackets '[]' added to protect address from robots, clik to copy without brackets. (or substitute the correct characters yourself)" onclick="emaLink(this)">jeremygoldsworthy [at] jlukesound [dot] co [dot] uk</button>
-                <button><a href="/assets/pages/gubbins/terrarium.html" id="gubButton">gubbins</a></button>
+                <button><a href="./assets/pages/gubbins/terrarium.html" id="gubButton">gubbins</a></button>
             </nav>
         </footer>
+        <script src="./assets/scripts/embedRefresh.js" defer></script>
     </body>
 </html>
