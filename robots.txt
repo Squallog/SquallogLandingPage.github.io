@@ -15,7 +15,7 @@ User-agent: MojeekBot
 User-agent: PetalBot
 User-agent: Slurp
 User-agent: LinkedInBot
-
+allow: /
 Sitemap: https://www.jlukesound.co.uk/sitemap.xml
 
 # AI policies ===============================================================================
