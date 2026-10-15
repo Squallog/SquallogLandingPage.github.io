@@ -242,14 +242,14 @@ footer > nav > a {
     main {
         width: 60vw !important;
         padding-top: 70px;
-    };
+    }
 
     h1 {
         position: absolute;
         top: 5px;
         left: calc(20vw - 5px);
         flex-wrap: nowrap !important;
-    };
+    }
 
     .videoScroller {
         width: 90%;
