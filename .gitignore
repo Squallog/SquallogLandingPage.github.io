@@ -1,3 +1,5 @@
 CNAME
+**/secrets.*
+secrets.gbSched.txt
 
 # Nothing else on the gitignore for the time being
