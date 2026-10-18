@@ -1,0 +1,17 @@
+{
+    "name": "Jeremy Goldsworthy - JlukeSound",
+    "short_name": "JlukeSound",
+    "icons": [
+        {
+            "src": "/favicon-16x16.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        },
+        {
+            "src":"/favicon-42x42.png",
+            "sizes": "42x42",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/index.html"
+}
