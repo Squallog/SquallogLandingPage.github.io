@@ -1,4 +1,4 @@
 CNAME
 **/secrets.*
-
+**.xcf
 # Nothing else on the gitignore for the time being
