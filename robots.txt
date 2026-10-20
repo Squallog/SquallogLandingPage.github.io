@@ -1,4 +1,5 @@
 User-agent: *
+Allow: /favicon.ico
 Disallow: /assets/pages/gubbins/
 Disallow: /assets/audio/
 Disallow: /assets/graphics/
