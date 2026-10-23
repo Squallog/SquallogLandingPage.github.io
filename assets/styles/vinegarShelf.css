@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&display=swap&family=Bungee');
+
+:root {
+    --bgColourA: #54380b;
+    --bgColourB: rgb(122, 75, 50)
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+	background:
+		  linear-gradient(135deg,#0000 18.75%,var(--bgColourA) 0 31.25%,#0000 0),
+		  repeating-linear-gradient(45deg,var(--bgColourA) -6.25% 6.25%, var(--bgColourB)0 18.75%);
+	background-size: 64px 64px;
+    font-family: "IM Fell DW Pica SC";
+}
+
+body {
+    width: 80vw;
+    margin: 8px auto 8px auto;
+    background-color: rgb(251, 252, 232);
+}
+
+header, main, table, iframe, #spannerMarquee {
+    width: 100%;
+    margin: 8px auto 8px auto;
+    padding: 5px;
+    /* border: solid black 1px; */
+}
+
+iframe {
+    aspect-ratio: 16/9;
+}
+
+tr {
+    text-align: left;
+}
+
+/* Table cells */
+.rightTxt {
+    text-align: right;
+}
+
+#marqueeContainer {
+    overflow-x: hidden;
+    background-color: rgb(230, 55, 55);
+}
+
+#spannerMarquee {
+    animation: infinite linear marquee 20s;
+    text-align: center;
+    white-space: pre;
+}
+
+/* Headers */
+h1, h2, h3 {
+    font-family: "Bungee";
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(100vw);
+    }
+    to {
+        transform: translateX(-100vw);
+    }
+}
