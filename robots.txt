@@ -17,6 +17,7 @@ User-agent: PetalBot
 User-agent: Slurp
 User-agent: LinkedInBot
 allow: /
+disallow: /assets/pages/gubbins/
 Sitemap: https://www.jlukesound.co.uk/sitemap.xml
 
 # AI policies ===============================================================================
