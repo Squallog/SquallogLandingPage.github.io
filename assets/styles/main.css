@@ -109,19 +109,11 @@ summary {
     border-bottom: 2px var(--borderColour) solid;
 }
 
-details > p, h2, h3 {
-    padding: 0 10px 0 10px;
-}
-
-details p, ul {
+details p, ul, h3 {
     color: whitesmoke;
 }
 
-::marker {
-    display: none;
-}
-
-details summary::-webkit-details-marker {
+::marker, ::-webkit-details-marker{
     display: none;
 }
 
@@ -167,16 +159,11 @@ section > iframe {
     padding: 5px;
 }
 
-#vidPort > iframe {
+#vidPort > iframe, embed {
     margin-left: auto;
     margin-right: auto;
     border: 2px solid black;
     border-radius: 5px;
-}
-
-.controls {
-    width: 20%;
-    padding: 0;
 }
 
 nav {
